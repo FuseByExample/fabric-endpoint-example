@@ -1,1 +1,6 @@
-target/
+target
+*.i??
+.idea
+.settings
+.project
+.classpath
