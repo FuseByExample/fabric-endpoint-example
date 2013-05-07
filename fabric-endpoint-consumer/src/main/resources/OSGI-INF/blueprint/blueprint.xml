@@ -33,11 +33,14 @@
             <cm:property name="port" value="8765"/>
         </cm:default-properties>
     </cm:property-placeholder>
+    
+    <bean id="properties" class="org.apache.camel.component.properties.PropertiesComponent">
+           <property name="location" value="blueprint:myblueprint.placeholder"/>
+    </bean>
 
     <reference id="zkClient" interface="org.fusesource.fabric.zookeeper.IZKClient" />
     
     <camelContext id="baseCamelContext" xmlns="http://camel.apache.org/schema/blueprint">
-        <propertyPlaceholder location="blueprint:myblueprint.placeholder" id="properties"/>
         
         <route id="fabric-consumer">
             <from uri="fabric:fabrictestendpoint:jetty:http://0.0.0.0:{{port}}/fabric"/>
