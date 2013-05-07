@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Fabric Endpoint Example
 
 This project presenta a sample app for the usage of fabric endpoints. It presents a simple client which sends messages 
