@@ -14,7 +14,7 @@ The Maven projects contained within are as follows:
 
 ## Requirements:
 
-* JBoss Fuse 6.0.0 (http://www.jboss.org/jbossfuse)
+* JBoss Fuse 6.1.0 (http://www.jboss.org/jbossfuse)
 * Maven 3.x (http://maven.apache.org/)
 * Java SE 6
 
