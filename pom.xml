@@ -33,8 +33,8 @@
     </modules>
 
     <properties>
-        <camel.version>2.12.0.redhat-610312</camel.version>
-        <fuse.version>7.2.0.redhat-024</fuse.version>
+        <camel.version>2.12.0.redhat-610379</camel.version>
+        <fuse.version>redhat-610312</fuse.version>
         <maven-resources-plugin-version>2.5</maven-resources-plugin-version>
         <build-helper-plugin-version>1.7</build-helper-plugin-version>
     </properties>
@@ -80,20 +80,20 @@
 
     <repositories>
         <repository>
-            <id>release.fusesource.org</id>
+            <id>fusesource.releases</id>
             <name>FuseSource Release Repository</name>
-            <url>http://repo.fusesource.com/nexus/content/repositories/releases</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+            <url>https://repository.jboss.org/nexus/content/repositories/fs-releases/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
         <repository>
             <id>fusesource.ea</id>
-            <name>FuseSource Early Access</name>
-            <url>http://repo.fusesource.com/nexus/content/groups/ea</url>
+            <name>FuseSource Early Access Release Repository</name>
+            <url>https://repository.jboss.org/nexus/content/groups/ea/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -104,20 +104,20 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>release.fusesource.org</id>
+            <id>fusesource.releases</id>
             <name>FuseSource Release Repository</name>
-            <url>http://repo.fusesource.com/nexus/content/repositories/releases</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+            <url>https://repository.jboss.org/nexus/content/repositories/fs-releases/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </pluginRepository>
         <pluginRepository>
             <id>fusesource.ea</id>
-            <name>FuseSource Early Access</name>
-            <url>http://repo.fusesource.com/nexus/content/groups/ea</url>
+            <name>FuseSource Early Access Release Repository</name>
+            <url>https://repository.jboss.org/nexus/content/groups/ea/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -126,5 +126,6 @@
             </releases>
         </pluginRepository>
     </pluginRepositories>
-    
+
+
 </project>
