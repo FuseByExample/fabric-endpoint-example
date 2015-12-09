@@ -34,7 +34,7 @@
 
     <properties>
         <build.helper.maven.plugin.version>1.9.1</build.helper.maven.plugin.version>
-        <camel.version>2.15.1.redhat-621083</camel.version>
+        <camel.version>2.15.1.redhat-621084</camel.version>
         <felix.maven.bundle.plugin.version>2.5.3</felix.maven.bundle.plugin.version>
         <maven.resources.plugin.version>2.7</maven.resources.plugin.version>
 
