@@ -34,8 +34,6 @@
         </cm:default-properties>
     </cm:property-placeholder>
 
-    <reference id="zkClient" interface="org.fusesource.fabric.zookeeper.IZKClient" />
-    
     <camelContext id="baseCamelContext" xmlns="http://camel.apache.org/schema/blueprint">
         <propertyPlaceholder location="blueprint:myblueprint.placeholder" id="properties"/>
         

@@ -14,9 +14,9 @@ The Maven projects contained within are as follows:
 
 ## Requirements:
 
-* JBoss Fuse 6.1.0 (http://www.jboss.org/jbossfuse)
-* Maven 3.x (http://maven.apache.org/)
-* Java SE 6
+* JBoss Fuse 6.3.0 (http://www.jboss.org/jbossfuse)
+* Maven 3.2.3 or newer (http://maven.apache.org/)
+* Java SE 7
 
 ## Building the example
 
@@ -26,41 +26,26 @@ Build this project so bundles are deployed into your local maven repo
 
 ## Prepare Fabric
 
-Start JBoss Fuse
+Start JBoss Fuse and create a fabric
 
     <JBoss Fuse home>  $ bin/fuse
+    JBossFuse:karaf@root> fabric:create --wait-for-provisioning 
+    
 
-Install the febric web-ui feature
+## Create a profile containing the client and consumer
 
-    JBossFuse:karaf@root> features:install fabric-webui
+    JBossFuse:karaf@root> fabric:profile-create --parent feature-camel --parent karaf endpoint-profile
+    JBossFuse:karaf@root> fabric:profile-edit --repository mvn:com.fusesource.examples/fabric-endpoint-features/1.0-SNAPSHOT/xml/features endpoint-profile 
+    JBossFuse:karaf@root> fabric:profile-edit --feature fabric-endpoint-consumer endpoint-profile
+    JBossFuse:karaf@root> fabric:profile-edit --feature fabric-endpoint-client endpoint-profile
+    
+Add the profile to the root container
 
-
-## Create consumer Profile and container
-
-Follow the instructions from the ['Managing a Deployment using Fuse Fabric'-guide]
-(https://github.com/FuseByExample/docs/blob/master/deploy-using-fabric/README.md) to configure a profile and container 
-for the consumer:
-
-* `profile name`: fabric-endpoint-consumer
-* `parent profiles`: camel, karaf
-* `features file url`: mvn:com.fusesource.examples/fabric-endpoint-features/1.0-SNAPSHOT/xml/features
-* Add the feature `fabric-endpoint-consumer` to the profile
-
-Create a child container named `consumer` and assign the `fabric-endpoint-consumer` profile.
-
-## Install Client feature
-
-Add the example's features to the feature list by adding the features file url:
-
-    JBossFuse:karaf@root> features:addurl mvn:com.fusesource.examples/fabric-endpoint-features/1.0-SNAPSHOT/xml/features
-
-Install the `fabric-endpoint-client` feature:
-
-    JBossFuse:karaf@root> features:install fabric-endpoint-client
+    JBossFuse:karaf@root> fabric:container-add-profile root endpoint-profile
  
 To see what is happening look at the Fuse log file, either from the console
 
-    JBossFuse:karaf@root> log:display
+    JBossFuse:karaf@root> log:tail
 
    or from the command line
 

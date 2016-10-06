@@ -19,13 +19,13 @@
 
     <feature name="fabric-endpoint-client" description="Fabric Endpoint :: Client" version="${project.version}">
         <feature version="${camel.version}">camel-jetty</feature>
-        <feature version="${fuse.version}">fabric-camel</feature>
+        <feature version="${fabric.version}">fabric-camel</feature>
         <bundle>mvn:com.fusesource.examples/fabric-endpoint-client/1.0-SNAPSHOT</bundle>
     </feature>
 
     <feature name="fabric-endpoint-consumer" description="Fabric Endpoint :: Consumer" version="${project.version}">
         <feature version="${camel.version}">camel-jetty</feature>
-        <feature version="${fuse.version}">fabric-camel</feature>
+        <feature version="${fabric.version}">fabric-camel</feature>
         <bundle>mvn:com.fusesource.examples/fabric-endpoint-consumer/1.0-SNAPSHOT</bundle>
     </feature>
 </features>
