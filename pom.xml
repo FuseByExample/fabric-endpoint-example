@@ -34,9 +34,9 @@
 
     <properties>
         <build.helper.maven.plugin.version>1.9.1</build.helper.maven.plugin.version>
-        <camel.version>2.17.0.redhat-630193</camel.version>
-        <fabric.version>1.2.0.redhat-630193</fabric.version>
-        <jboss.fuse.bom.version>6.3.0.redhat-193</jboss.fuse.bom.version>
+        <camel.version>2.17.0.redhat-630187</camel.version>
+        <fabric.version>1.2.0.redhat-630187</fabric.version>
+        <jboss.fuse.bom.version>6.3.0.redhat-187</jboss.fuse.bom.version>
         <felix.maven.bundle.plugin.version>2.5.3</felix.maven.bundle.plugin.version>
         <maven.resources.plugin.version>2.7</maven.resources.plugin.version>
 
